@@ -8,8 +8,7 @@
 
 #效果图
 
-![image](https://github.com/CoderJackyHuang/HYBUnicodeReadable/b
-    lob/master/demo/demo/screenshot.gif)
+![image](https://github.com/CoderJackyHuang/HYBUnicodeReadable/blob/master/screenshot.gif)
 
 #讲解
 
