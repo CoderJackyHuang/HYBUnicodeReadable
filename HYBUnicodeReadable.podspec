@@ -25,10 +25,12 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
+                   * 解决打印日志对于Unicode编码不能正常显示中文的问题，只需要将文件导入工程，不需要引用，就能达到打印日志显示Unicode编码中文数据
+                   * 引入工程后，不需要包含头文件即可达到效果
                    DESC
 
   s.homepage     = "http://www.henishuo.com/ios-unicode-readable/"
-  s.screenshots  =  "https://github.com/CoderJackyHuang/HYBUnicodeReadable/blob/master/demo/demo/screenshot.gif"
+  s.screenshots  =  "https://github.com/CoderJackyHuang/HYBUnicodeReadable/raw/master/screenshot.gif"
 
 
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
