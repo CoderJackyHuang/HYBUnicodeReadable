@@ -24,9 +24,6 @@
 		698828061C32248D002363D5 /* NSDictionary+HYBUnicodeReadable.m in Sources */ = {isa = PBXBuildFile; fileRef = 698828051C32248D002363D5 /* NSDictionary+HYBUnicodeReadable.m */; };
 		698828071C32248D002363D5 /* NSDictionary+HYBUnicodeReadable.m in Sources */ = {isa = PBXBuildFile; fileRef = 698828051C32248D002363D5 /* NSDictionary+HYBUnicodeReadable.m */; };
 		698828081C32248D002363D5 /* NSDictionary+HYBUnicodeReadable.m in Sources */ = {isa = PBXBuildFile; fileRef = 698828051C32248D002363D5 /* NSDictionary+HYBUnicodeReadable.m */; };
-		6988280E1C322A48002363D5 /* screenshot.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6988280D1C322A48002363D5 /* screenshot.gif */; };
-		6988280F1C322A48002363D5 /* screenshot.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6988280D1C322A48002363D5 /* screenshot.gif */; };
-		698828101C322A48002363D5 /* screenshot.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6988280D1C322A48002363D5 /* screenshot.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,7 +66,6 @@
 		698828001C322479002363D5 /* NSArray+HYBUnicodeReadable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+HYBUnicodeReadable.m"; sourceTree = "<group>"; };
 		698828041C32248D002363D5 /* NSDictionary+HYBUnicodeReadable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+HYBUnicodeReadable.h"; sourceTree = "<group>"; };
 		698828051C32248D002363D5 /* NSDictionary+HYBUnicodeReadable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+HYBUnicodeReadable.m"; sourceTree = "<group>"; };
-		6988280D1C322A48002363D5 /* screenshot.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = screenshot.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,7 +116,6 @@
 		698827C51C322425002363D5 /* demo */ = {
 			isa = PBXGroup;
 			children = (
-				6988280D1C322A48002363D5 /* screenshot.gif */,
 				698827F91C322459002363D5 /* HYBUnicodeReadable */,
 				698827C91C322425002363D5 /* AppDelegate.h */,
 				698827CA1C322425002363D5 /* AppDelegate.m */,
@@ -281,7 +276,6 @@
 				698827D61C322425002363D5 /* LaunchScreen.storyboard in Resources */,
 				698827D31C322425002363D5 /* Assets.xcassets in Resources */,
 				698827D11C322425002363D5 /* Main.storyboard in Resources */,
-				6988280E1C322A48002363D5 /* screenshot.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +283,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6988280F1C322A48002363D5 /* screenshot.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,7 +290,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				698828101C322A48002363D5 /* screenshot.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
