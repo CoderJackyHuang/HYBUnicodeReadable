@@ -11,7 +11,7 @@
 支持cocoapods：
 
 ```
-pod 'HYBUnicodeReadable', '~> 0.0.1'
+pod 'HYBUnicodeReadable', '~> 1.0'
 ```
 
 或者直接下载源代码然后拖入工程即可！！！
@@ -27,60 +27,82 @@ pod 'HYBUnicodeReadable', '~> 0.0.1'
 增加对NSData类型的数据的可视化打印，如下：
 
 ```
-2015-12-31 16:47:42.352 demo[58176:2693559]     {
-        hasBug =    (
-                        "YES",
-                                "NO",
-                                    ),
-                dataString = "我是转换成",
-                    title = "http://www.henishuo.com",
-                        count = 11,
-                            results =   {(
-                                            "集合值2",
-                                                    "集合值1",
-                                                                {(
-                                                                                "可变集合",
-                                                                                            "字典->不可变集合->可变集合",
-                                                                                                            {
-                                                                                                                            key = "字典转成data",
-                                                                                                                                            key1 = "在set、数组、字典中嵌套",
-                                                                                                                                                        },
-                                                                                                                                                                )},
-                                                                    )},
-                                summaries =     (
-                                                "sm1",
-                                                        "sm2",
-                                                                    {
-                                                                                keysm =     {
-                                                                                                stkey = "字典->数组->字典->字典",
-                                                                                                            },
-                                                                                                                    },
-                                                                                                                                {
-                                                                                                                                            key = "字典转成data",
-                                                                                                                                                        key1 = "在set、数组、字典中嵌套",
-                                                                                                                                                                },
-                                                                                                                                                                    ),
-                                    contact =   (
-                                                    "关注博客地址：http://www.henishuo.com",
-                                                            "QQ群: 324400294",
-                                                                    "关注微博：标哥Jacky",
-                                                                            "关注GITHUB：CoderJackyHuang",
-                                                                                ),
-                                        name = "标哥的技术博客",
-                                            parameters =    {
-                                                        key1 = "value1",
-                                                                key13 =     {
-                                                                                key = "字典转成data",
-                                                                                            key1 = "在set、数组、字典中嵌套",
-                                                                                                    },
-                                                                        key2 =  {
-                                                                                        key11 = "value11",
-                                                                                                    key12 =     (
-                                                                                                                            "三层",
-                                                                                                                                            "字典->字典->数组",
-                                                                                                                                                        ),
-                                                                                                            },
-                                                                            },
+NSString *str = @"我是转换成data格式的字符串";
+  NSData *dataString = [NSData dataWithBytes:str.UTF8String length:str.length];
+  NSDictionary *dataSet = @{@"key": @"字典转成data",
+                            @"key1": @"在set、数组、字典中嵌套"};
+  NSData *dataSetItem = [NSJSONSerialization dataWithJSONObject:dataSet options:NSJSONWritingPrettyPrinted error:nil];
+  
+  NSMutableSet *set = [NSMutableSet setWithArray:@[@"可变集合", @"字典->不可变集合->可变集合", dataSetItem]];
+  NSDictionary *dict = @{@"name"  : @"标哥的技术博客",
+                         @"title" : @"http://www.henishuo.com",
+                         @"count" : @(11),
+                         @"dataString" : dataString,
+                         @"results" : [NSSet setWithObjects:@"集合值1", @"集合值2", set , nil],
+                         @"summaries" : @[@"sm1", @"sm2", @{@"keysm": @{@"stkey": @"字典->数组->字典->字典"}}, dataSetItem],
+                         @"parameters" : @{@"key1" : @"value1", @"key2": @{@"key11" : @"value11", @"key12" : @[@"三层", @"字典->字典->数组"]}, @"key13": dataSetItem},
+                         @"hasBug": @[@"YES",@"NO"],
+                         @"contact" : @[@"关注博客地址：http://www.henishuo.com", @"QQ群: 324400294", @"关注微博：标哥Jacky", @"关注GITHUB：CoderJackyHuang"]};
+  NSLog(@"%@", dict);
+```
+
+打印结果为：
+
+```
+2015-12-31 16:47:42.352 demo[58176:2693559] 	{
+	hasBug = 	(
+		"YES",
+		"NO",
+	),
+	dataString = "我是转换成",
+	title = "http://www.henishuo.com",
+	count = 11,
+	results = 	{(
+		"集合值2",
+		"集合值1",
+			{(
+			"可变集合",
+			"字典->不可变集合->可变集合",
+				{
+				key = "字典转成data",
+				key1 = "在set、数组、字典中嵌套",
+			},
+		)},
+	)},
+	summaries = 	(
+		"sm1",
+		"sm2",
+			{
+			keysm = 	{
+				stkey = "字典->数组->字典->字典",
+			},
+		},
+			{
+			key = "字典转成data",
+			key1 = "在set、数组、字典中嵌套",
+		},
+	),
+	contact = 	(
+		"关注博客地址：http://www.henishuo.com",
+		"QQ群: 324400294",
+		"关注微博：标哥Jacky",
+		"关注GITHUB：CoderJackyHuang",
+	),
+	name = "标哥的技术博客",
+	parameters = 	{
+		key1 = "value1",
+		key13 = 	{
+			key = "字典转成data",
+			key1 = "在set、数组、字典中嵌套",
+		},
+		key2 = 	{
+			key11 = "value11",
+			key12 = 	(
+				"三层",
+				"字典->字典->数组",
+			),
+		},
+	},
 }
 ```
 
