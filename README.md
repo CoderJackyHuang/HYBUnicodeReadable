@@ -10,6 +10,68 @@
 
 ![image](https://github.com/CoderJackyHuang/HYBUnicodeReadable/blob/master/screenshot.gif)
 
+#version 1.0
+
+增加对NSData类型的数据的可视化打印，如下：
+
+```
+2015-12-31 16:47:42.352 demo[58176:2693559]     {
+        hasBug =    (
+                        "YES",
+                                "NO",
+                                    ),
+                dataString = "我是转换成",
+                    title = "http://www.henishuo.com",
+                        count = 11,
+                            results =   {(
+                                            "集合值2",
+                                                    "集合值1",
+                                                                {(
+                                                                                "可变集合",
+                                                                                            "字典->不可变集合->可变集合",
+                                                                                                            {
+                                                                                                                            key = "字典转成data",
+                                                                                                                                            key1 = "在set、数组、字典中嵌套",
+                                                                                                                                                        },
+                                                                                                                                                                )},
+                                                                    )},
+                                summaries =     (
+                                                "sm1",
+                                                        "sm2",
+                                                                    {
+                                                                                keysm =     {
+                                                                                                stkey = "字典->数组->字典->字典",
+                                                                                                            },
+                                                                                                                    },
+                                                                                                                                {
+                                                                                                                                            key = "字典转成data",
+                                                                                                                                                        key1 = "在set、数组、字典中嵌套",
+                                                                                                                                                                },
+                                                                                                                                                                    ),
+                                    contact =   (
+                                                    "关注博客地址：http://www.henishuo.com",
+                                                            "QQ群: 324400294",
+                                                                    "关注微博：标哥Jacky",
+                                                                            "关注GITHUB：CoderJackyHuang",
+                                                                                ),
+                                        name = "标哥的技术博客",
+                                            parameters =    {
+                                                        key1 = "value1",
+                                                                key13 =     {
+                                                                                key = "字典转成data",
+                                                                                            key1 = "在set、数组、字典中嵌套",
+                                                                                                    },
+                                                                        key2 =  {
+                                                                                        key11 = "value11",
+                                                                                                    key12 =     (
+                                                                                                                            "三层",
+                                                                                                                                            "字典->字典->数组",
+                                                                                                                                                        ),
+                                                                                                            },
+                                                                            },
+}
+```
+
 #讲解
 
 为了更详细地说明如何使用，笔者写了一篇博文，大家可以阅读：[http://www.henishuo.com/ios-unicode-readable/](http://www.henishuo.com/ios-unicode-readable/)
