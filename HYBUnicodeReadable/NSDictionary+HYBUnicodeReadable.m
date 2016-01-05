@@ -10,6 +10,7 @@
 
 @implementation NSDictionary (HYBUnicodeReadable)
 
+#if DEBUG
 - (NSString *)descriptionWithLocale:(id)locale indent:(NSUInteger)level {
   NSMutableString *desc = [NSMutableString string];
   
@@ -73,5 +74,6 @@
   
   return desc;
 }
+#endif
 
 @end

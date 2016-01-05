@@ -11,7 +11,7 @@
 支持cocoapods：
 
 ```
-pod 'HYBUnicodeReadable', '~> 1.0'
+pod 'HYBUnicodeReadable', '~> 1.1'
 ```
 
 或者直接下载源代码然后拖入工程即可！！！
@@ -105,6 +105,10 @@ NSString *str = @"我是转换成data格式的字符串";
 	},
 }
 ```
+
+#Version1.1
+
+增加条件编译，只对Debug环境下起作用
 
 #讲解
 

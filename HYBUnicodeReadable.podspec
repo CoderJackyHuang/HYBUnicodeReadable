@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "HYBUnicodeReadable"
-  s.version      = "1.0"
+  s.version      = "1.1"
   s.summary      = "解决打印日志对于Unicode编码不能正常显示中文的问题，只需要将文件导入工程，不需要引用，就能达到打印日志显示Unicode编码中文数据"
 
   # This description is used to generate tags and improve search results.
@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
                    * 引入工程后，不需要包含头文件即可达到效果
                    DESC
 
-  s.homepage     = "http://www.henishuo.com/ios-unicode-readable/"
+  s.homepage     = "https://github.com/CoderJackyHuang/HYBUnicodeReadable"
   s.screenshots  =  "https://github.com/CoderJackyHuang/HYBUnicodeReadable/raw/master/screenshot.gif"
 
 
@@ -81,7 +81,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/CoderJackyHuang/HYBUnicodeReadable.git", :tag => "1.0" }
+  s.source       = { :git => "https://github.com/CoderJackyHuang/HYBUnicodeReadable.git", :tag => "1.1" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
