@@ -46,7 +46,8 @@
                          @"contact" : @[@"关注博客地址：http://www.henishuo.com",
                                         @"QQ群: 324400294",
                                         @"关注微博：标哥Jacky",
-                                        @"关注GITHUB：CoderJackyHuang"]};
+                                        @"关注GITHUB：CoderJackyHuang"],
+                         @"xx" : [NSURLSession sharedSession]};
   NSLog(@"%@", dict);
 }
 

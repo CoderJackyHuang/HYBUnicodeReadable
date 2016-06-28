@@ -30,6 +30,10 @@
   for (id key in self.allKeys) {
     id obj = [self objectForKey:key];
     
+    if (![obj respondsToSelector:@selector(description)]) {
+      continue;
+    }
+    
     if ([obj isKindOfClass:[NSString class]]) {
       [desc appendFormat:@"%@\t%@ = \"%@\",\n", tab, key, obj];
     } else if ([obj isKindOfClass:[NSArray class]]
@@ -66,7 +70,13 @@
         }
       }
     } else {
-      [desc appendFormat:@"%@\t%@ = %@,\n", tab, key, obj];
+      @try {
+        [desc appendFormat:@"%@\t%@ = %@,\n", tab, key, obj];
+      } @catch (NSException *exception) {
+        
+      } @finally {
+        
+      }
     }
   }
   

@@ -26,6 +26,10 @@
   [desc appendString:@"\t{(\n"];
   
   for (id obj in self) {
+    if (![obj respondsToSelector:@selector(description)]) {
+      continue;
+    }
+    
     if ([obj isKindOfClass:[NSDictionary class]]
         || [obj isKindOfClass:[NSArray class]]
         || [obj isKindOfClass:[NSSet class]]) {
@@ -63,7 +67,13 @@
         }
       }
     } else {
-      [desc appendFormat:@"%@\t%@,\n", tab, obj];
+      @try {
+        [desc appendFormat:@"%@\t%@,\n", tab, obj];
+      } @catch (NSException *exception) {
+        
+      } @finally {
+        
+      }
     }
   }
   
