@@ -112,7 +112,7 @@ NSString *str = @"我是转换成data格式的字符串";
 
 #讲解
 
-为了更详细地说明如何使用，笔者写了一篇博文，大家可以阅读：[http://www.huangyibiao.com/ios-unicode-readable/](http://www.henishuo.com/ios-unicode-readable/)
+为了更详细地说明如何使用，笔者写了一篇博文，大家可以阅读：[http://www.huangyibiao.com/ios-unicode-readable/](http://www.huangyibiao.com/ios-unicode-readable/)
 
 #维护
 
